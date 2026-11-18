@@ -39,6 +39,8 @@ LEARNING_RATE = client.task.learning_rate
 EXPORT_WIDTH = client.task.export_width
 EXPORT_HEIGHT = client.task.export_height
 
+print(f"CUDA available: {torch.cuda.is_available()}")
+
 export_class_folder(client, DATASET_PATH)
 
 train_dataset = load_dataset(str(DATASET_PATH/"TRAIN"))["train"]
